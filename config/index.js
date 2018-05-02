@@ -7,7 +7,7 @@ let config = {
     prefix: '/wechat',
     appid: 'wx6e06322887658558',
     appsecret: 'afa84f6eae4d20b337a3478f3d58c5a7',
-    db: 'mongodb://root:123@api.h5.jamma.cn/main?authSource=admin',
+    db: 'mongodb://root:123@api.h5.jamma.cn/wyb?authSource=admin',
     gateway: 'http://api.wyb.jamma.cn:81',
     token: 'weixin',
     encodingAESKey: 'tQVHbJ5vZEfnsKzoPxq8xlpKF1J2ZnQsZB8wMcWLC16'
@@ -30,7 +30,7 @@ let env = process.env.NODE_ENV || 'development'
 config = config[env] || config['development']
 config.env = env;
 
-['debug', 'lng', 'port', 'appid', 'appsecret', 'token', 'encodingAESKey'].forEach(function (key) {
+['debug', 'port', 'lng', 'prefix', 'db', 'gateway', 'appid', 'appsecret', 'encodingAESKey', 'token'].forEach(function (key) {
   process.env[key] && (config[key] = process.env[key])
 })
 
