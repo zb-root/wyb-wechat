@@ -1,0 +1,35 @@
+{
+  "name": "wechat",
+  "version": "0.0.1",
+  "description": "",
+  "main": "./lib/index",
+  "scripts": {
+    "start": "node app",
+    "cluster": "node cluster",
+    "test": "node test"
+  },
+  "repository": {},
+  "keywords": [],
+  "author": {
+    "name": "Jeff YU"
+  },
+  "license": "MIT",
+  "bugs": {},
+  "homepage": "",
+  "dependencies": {
+    "bluebird": "^3.5.0",
+    "async": "^1.4.2",
+    "lodash": "*",
+    "body-parser": "*",
+    "express": "*",
+    "log4js": "^1.1.1",
+    "wechat": "^2.1.0",
+    "jm-dao": "*",
+    "jm-event": "*",
+    "jm-ms": "*",
+    "wechat-api": "^1.35.1",
+    "wechat-oauth": "^1.2.1"
+  },
+  "readme": "",
+  "readmeFilename": "README.md"
+}
