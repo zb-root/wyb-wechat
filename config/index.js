@@ -5,8 +5,9 @@ let config = {
     port: 3000,
     lng: 'zh_CN',
     prefix: '/wechat',
-    appid: 'wx6e06322887658558',
-    appsecret: 'afa84f6eae4d20b337a3478f3d58c5a7',
+    domain: 'www.wyb.jamma.cn',
+    appid: 'wx7c7aa23a249cf275',
+    appsecret: '438984dc3501b8f6f79afe5ceeed8d06',
     db: 'mongodb://root:123@api.h5.jamma.cn/wyb?authSource=admin',
     gateway: 'http://api.wyb.jamma.cn:81',
     token: 'weixin',
@@ -17,8 +18,9 @@ let config = {
     port: 80,
     lng: 'zh_CN',
     prefix: '/wechat',
-    appid: 'wx6e06322887658558',
-    appsecret: 'afa84f6eae4d20b337a3478f3d58c5a7',
+    domain: 'www.wyb.jamma.cn',
+    appid: 'wx7c7aa23a249cf275',
+    appsecret: '438984dc3501b8f6f79afe5ceeed8d06',
     db: 'mongodb://root:123@api.h5.jamma.cn/main?authSource=admin',
     gateway: 'http://gateway.app',
     token: 'weixin',
@@ -30,7 +32,7 @@ let env = process.env.NODE_ENV || 'development'
 config = config[env] || config['development']
 config.env = env;
 
-['debug', 'port', 'lng', 'prefix', 'db', 'gateway', 'appid', 'appsecret', 'encodingAESKey', 'token'].forEach(function (key) {
+['debug', 'port', 'lng', 'prefix', 'domain', 'db', 'gateway', 'appid', 'appsecret', 'encodingAESKey', 'token'].forEach(function (key) {
   process.env[key] && (config[key] = process.env[key])
 })
 
